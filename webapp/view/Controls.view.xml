@@ -1,0 +1,23 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="fiori.training.day3fiori-training-day3.controller.Controls" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page class="sapUiResponsiveContentPadding" title="Title">
+		<content>
+			<VBox>
+				<Text class="colorStyle" text="{i18n>intoDetail}">
+					<customData>
+						<core:CustomData key="deviceMark" value="{device>/os/name}" writeToDom="true" />
+					</customData>
+				</Text>
+				<Text text="{viewModel>/lessonName}"></Text>
+				<ComboBox
+					items="{
+						path: 'viewModel>/countryF4',
+						sorter: { path: 'text' }
+					}">
+					<core:Item key="{viewModel>key}" text="{viewModel>text}" />
+				</ComboBox>
+				<Button class="sapUiMediumMarginBegin" text="Accept"></Button>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
