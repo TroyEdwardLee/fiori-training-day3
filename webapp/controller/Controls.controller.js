@@ -20,7 +20,7 @@ sap.ui.define([
 			this.oView.setModel(this.oViewModel, "viewModel");
 			this._fetchCountriesF4Data();
 		},
-		
+
 		_fetchCountriesF4Data: function(sPath) {
 			this.oViewModel.setProperty("/countryF4", []);
 			jQuery.ajax(sap.ui.require.toUrl("fiori/training/day3fiori-training-day3/mockdata/countriesExtendedCollection.json"), {
